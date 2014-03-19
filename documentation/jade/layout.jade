@@ -1,0 +1,88 @@
+!!! 5
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+	head
+		meta(charset='utf-8')
+		//- fix W3C validate issue
+		// if IE
+			meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+		// if lt IE 9
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+		// stylesheets
+		block stylesheets
+			link(href="assets/css/bootstrap.min.css", rel="stylesheet")
+			link(href="assets/css/docs.css", rel="stylesheet")
+			link(href="assets/js/google-code-prettify/prettify.css", rel="stylesheet")
+			//- link(href="assets/css/main.css", rel="stylesheet")
+	
+	body(data-spy="scroll", data-target=".bs-docs-sidebar")
+
+
+		block header
+			header.navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav(role="banner")
+				.container
+					.navbar-header
+						button.navbar-toggle(type="button", data-toggle="collapse", data-target=".bs-navbar-collapse")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="javascript:;") iArouse
+					nav.collapse.navbar-collapse.bs-navbar-collapse(role="navigation")
+						ul.nav.navbar-nav
+							li.active
+								a(href="#") Document
+
+		block bs-header
+			.bs-header#content
+				.container
+					h1 Documentation
+					p The product instruction
+
+
+		//- Docs container
+		.container.bs-docs-container
+			.row
+				.col-md-3
+					.bs-sidebar.hidden-print
+						ul.nav.bs-sidenav
+							block docs-sidebar
+
+				.col-md-9(role="main")
+					block content
+
+
+
+		// Footer
+		block footer
+			footer.bs-footer
+				.container
+					p Copyright 2013 
+						a(href="http://iarouse.com/") iArouse.com
+
+		// Scripts
+		block scripts
+			script(src="assets/js/jquery.js")
+			script(src="assets/js/bootstrap.min.js")
+			script(src="assets/js/holder.js")
+			script(src="assets/js/google-code-prettify/prettify.js")
+			script(src="assets/js/jquery.smooth-scroll.js")
+			script(src="assets/js/application.js")
+
+		block initScript
+			script
+				$('.bs-sidenav a').smoothScroll();
+				window.prettyPrint && prettyPrint();
+

@@ -1,0 +1,12 @@
+
+.ui-tab {
+    .nav-tabs {
+        margin-bottom: 15px;
+
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
