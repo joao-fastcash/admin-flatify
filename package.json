@@ -1,5 +1,5 @@
 {
-  "name": "iSeven",
+  "name": "flatify",
   "version": "1.0.0",
   "dependencies": {
     "express": "~3.4.7"
