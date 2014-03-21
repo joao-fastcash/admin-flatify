@@ -2,7 +2,28 @@
 <section class="page-form-ele page">
 
 
+    <!-- Rating -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Rating</strong></div>
+        <div class="panel-body" data-ng-controller="RatingDemoCtrl">
+            <rating class="ui-rating size-h2"
+                    value="rate"
+                    max="max"
+                    readonly="isReadonly"
+                    on-hover="hoveringOver(value)"
+                    on-leave="overStar = null"
+                    state-on="'fa fa-star'"
+                    state-off="'fa fa-star-o'"></rating>
+            <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
 
+            <div class="callout callout-info">
+                <p>Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></p>
+            </div>
+
+            <button class="btn btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
+            <button class="btn btn-info" ng-click="isReadonly = ! isReadonly">Toggle Readonly</button>
+    </section> 
+    <!-- end Rating -->
 
 
     <!-- Switch -->
@@ -285,7 +306,7 @@
         <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="input-group">
+                    <div class="input-group ui-datepicker">
                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                         <input type="text" 
                                class="form-control"
@@ -336,7 +357,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div ng-model="mytime" ng-change="changed()" style="display:inline-block;">
-                        <timepicker hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+                        <timepicker class="ui-timepicker" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
                     </div>                    
                     <div class="callout callout-info">
                         <p>Time is: {{mytime | date:'shortTime' }}</p>
