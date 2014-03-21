@@ -81,6 +81,20 @@
         }
     }
 
+    .panel-icon {
+        display: block;
+        margin: -75px auto 0;
+        padding: 28px 35px 35px;
+        border-radius: 50%;
+        border: 10px solid $reverse;
+        width: 150px;
+        height: 150px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 58px;
+        @include text-shadow(-6px 8px 5px rgba(0,0,0,0.3));
+    }
+
 }
 
 // mini box
