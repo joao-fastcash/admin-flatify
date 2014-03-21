@@ -27,7 +27,8 @@
     "flot": "~0.8.2",
     "jquery-spinner": "~0.1.5",
     "jquery-steps": "https://github.com/rstaib/jquery-steps.git#~1.0.4",
-    "angular-wizard": "~0.3.0"
+    "angular-wizard": "~0.3.0",
+    "weather-icons": "~0.0.1"
   },
   "resolutions": {
     "jquery": "~1.11.0"

@@ -1,3 +1,18 @@
+
+// weather icons
+.weather-icon-list {
+    text-align: center;
+    .example {
+        text-align: center;
+        margin: 10px 3px;
+
+        .icon {
+            font-size: 24px;
+        }
+    }
+}
+
+// glyphicons icons
 .bs-glyphicons {
     padding-left: 0;
     padding-bottom: 1px;

@@ -224,6 +224,9 @@ module.exports = (grunt) ->
                         # bower components that has image, font dependencies
                         "bower_components/font-awesome/css/*"
                         "bower_components/font-awesome/fonts/*"
+                        "bower_components/weather-icons/css/*"
+                        "bower_components/weather-icons/fonts/*"
+
                         "fonts/**/*"
                         "i18n/**/*"
                         "images/**/*"
