@@ -53,5 +53,8 @@
     "data": "",
     "realtime data": "",
     "table": "",
-    "progress": ""
+    "progress": "",
+    "Log out": "",
+    "Lock Screen": "",
+    "Invoice": ""
 }

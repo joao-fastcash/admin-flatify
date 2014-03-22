@@ -63,6 +63,10 @@ angular.module('app', [
                 '/ui/components'
                 templateUrl: 'views/ui/components.html'
             )
+            .when(
+                '/ui/timeline'
+                templateUrl: 'views/ui/timeline.html'
+            )
 
             # Forms
             .when(
@@ -124,6 +128,10 @@ angular.module('app', [
                 templateUrl: 'views/pages/signup.html'
             )
             .when(
+                '/pages/lock-screen'
+                templateUrl: 'views/pages/lock-screen.html'
+            )
+            .when(
                 '/pages/profile'
                 templateUrl: 'views/pages/profile.html'
             )
@@ -134,6 +142,10 @@ angular.module('app', [
             .when(
                 '/pages/500'
                 templateUrl: 'views/pages/500.html'
+            )
+            .when(
+                '/pages/invoice'
+                templateUrl: 'views/pages/invoice.html'
             )
 
             # Tasks
