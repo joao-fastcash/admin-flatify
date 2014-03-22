@@ -12,6 +12,7 @@ angular.module('app', [
 
     # Custom modules
     'app.ui.ctrls'
+    'app.ui.directives'
     'app.ui.services'
     'app.controllers'
     'app.directives'
