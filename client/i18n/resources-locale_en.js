@@ -55,6 +55,9 @@
     "table": "",
     "progress": "",
     "Log out": "",
+    "Lock": "",
     "Lock Screen": "",
-    "Invoice": ""
+    "Invoice": "",
+    "Blank Page": "",
+    "Lisa Doe": ""
 }
