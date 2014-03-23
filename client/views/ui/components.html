@@ -7,6 +7,64 @@
         </div>
     </div> -->
 
+
+    <!-- Tab -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tabs</div>
+        <div class="panel-body" data-ng-controller="TabsDemoCtrl">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Simple Tabs</h3>
+                    <div class="divider"></div>
+                    <tabset class="ui-tab">
+                        <tab heading="Static title">Static content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at.</tab>
+                        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                            {{tab.content}}
+                        </tab>
+                    </tabset>
+
+                    <h3>Panel Tabs</h3>
+                    <div class="divider"></div>
+                    <div class="ui-tab-container">
+                        <tabset class="ui-tab">
+                            <tab heading="Home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus. </tab>
+                            <tab heading="Quod ea">Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</tab>
+                            <tab heading="Earum sequi">Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</tab>
+                        </tabset>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <h3>Justified Tabs</h3>
+                    <div class="divider"></div>
+                    <tabset justified="true" class="ui-tab">
+                        <tab heading="Justified">Justified content</tab>
+                        <tab heading="SJ">Short Labeled Justified content</tab>
+                        <tab heading="Long Justified">Long Labeled Justified content</tab>
+                    </tabset>
+
+                    <div class="divider divider-md"></div>
+
+                    <h3>Justified Panel Tabs</h3>
+                    <div class="divider"></div>
+                    <div class="ui-tab-container">
+                        <tabset justified="true" class="ui-tab">
+                            <tab heading="Justified">Justified content</tab>
+                            <tab heading="SJ">Short Labeled Justified content</tab>
+                            <tab heading="Long Justified">Long Labeled Justified content</tab>
+                        </tabset>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end Tab -->
+
+
     <!-- Notfify -->
     <section class="panel panel-default">
         <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Notify</div>
@@ -231,6 +289,7 @@
                 <h3>Limit the maximum visible buttons</h3>
             </div>
             <pagination total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
+            <br>
             <pagination total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
             <div class="callout callout-info">
                 <p>Page: {{bigCurrentPage}} / {{numPages}}</p>
@@ -344,35 +403,7 @@
 
 
 
-    <!-- Tab -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tabs</div>
-        <div class="panel-body" data-ng-controller="TabsDemoCtrl">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3>Simple Tabs</h3>
-                    <div class="divider"></div>
-                    <tabset class="ui-tab">
-                        <tab heading="Static title">Static content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab. Ad, repellendus non sequi et at.</tab>
-                        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
-                            {{tab.content}}
-                        </tab>
-                    </tabset>
-                </div>
 
-                <div class="col-sm-6">
-                    <h3>Justified Tabs</h3>
-                    <div class="divider"></div>
-                    <tabset justified="true" class="ui-tab">
-                        <tab heading="Justified">Justified content</tab>
-                        <tab heading="SJ">Short Labeled Justified content</tab>
-                        <tab heading="Long Justified">Long Labeled Justified content</tab>
-                    </tabset>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end Tab -->
 
 
 
