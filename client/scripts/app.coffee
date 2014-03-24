@@ -115,6 +115,20 @@ angular.module('app', [
                 templateUrl: 'views/charts/flot.html'
             )
 
+            # Mail
+             .when(
+                '/mail/inbox'
+                templateUrl: 'views/mail/inbox.html'
+            )
+             .when(
+                '/mail/compose'
+                templateUrl: 'views/mail/compose.html'
+            )
+             .when(
+                '/mail/single'
+                templateUrl: 'views/mail/single.html'
+            )
+
             # Pages
             .when(
                 '/pages/features'

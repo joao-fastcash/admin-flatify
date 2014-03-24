@@ -59,5 +59,8 @@
     "Lock Screen": "",
     "Invoice": "",
     "Blank Page": "",
-    "Lisa Doe": ""
+    "Lisa Doe": "",
+    "Inbox": "",
+    "Compose": "",
+    "Single Mail": ""
 }
