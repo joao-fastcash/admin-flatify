@@ -1,0 +1,32 @@
+.mail-compose {
+    .form-group {
+        > input {
+            border: none;
+
+            &:focus {
+                border: none;
+            }
+        }
+    }
+
+    .mail-body {
+        .btn-toolbar {
+            margin-bottom: 10px;
+            .btn-group {
+                margin: 5px;
+            }
+
+            .btn-default {
+                background-color: #fff;
+                color: $text-color;
+            }
+        }
+        #taTextElement {
+            min-height: 300px;
+        }
+    }
+
+    .mail-actions {
+        margin-top: 10px;
+    }
+}

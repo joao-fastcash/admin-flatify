@@ -9,6 +9,7 @@ angular.module('app', [
     'ui.bootstrap'
     'easypiechart'
     'mgo-angular-wizard'
+    'textAngular'
 
     # Custom modules
     'app.ui.ctrls'
