@@ -7,6 +7,84 @@
         </div>
     </div> -->
 
+    <!-- Notfify -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Notify</div>
+        <div class="panel-body" data-ng-controller="NotifyCtrl">
+            <button class="btn btn-gap btn-info" data-ng-click="notify('info')">Show info message</button>
+            <button class="btn btn-gap btn-success" data-ng-click="notify('success')">Show success message</button>
+            <button class="btn btn-gap btn-warning" data-ng-click="notify('warning')">Show warning message</button>
+            <button class="btn btn-gap btn-danger" data-ng-click="notify('error')">Show error message</button>
+            <div class="callout callout-info">
+                <p>Notification will show in lower right corner.</p>
+            </div>
+        </div>
+    </section>
+    <!-- end Notify -->
+
+
+    <!-- Accordion -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Accordion or Collapse</div>
+        <div class="panel-body" data-ng-controller="AccordionDemoCtrl">
+            <accordion close-others="oneAtATime" class="ui-accordion">
+                <accordion-group heading="Static Header, initially expanded" is-open="true">
+                    This content is straight in the template.
+                </accordion-group>
+                <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                    {{group.content}}
+                </accordion-group>
+            </accordion>
+
+            <hr>
+            <p>Open only one at a time?</p>
+            <label class="switch switch-success"><input type="checkbox" ng-model="oneAtATime"><i></i></label>
+        </div>
+    </section>
+    <!-- end Accordion -->
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Popover -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Popover</div>
+                <div class="panel-body text-center">
+                    <button popover-placement="top" popover-title="The title." popover="On the Top!" class="btn btn-primary btn-gap">Popover on Top</button>
+                    <br>
+                    <button popover-placement="right" popover-title="The title." popover="On the Right!" class="btn btn-info btn-gap">Popover on Right</button>
+                    <br>
+                    <button popover-placement="bottom" popover-title="The title." popover="On the Bottom!" class="btn btn-success btn-gap">Popover on Bottom</button>
+                    <br>
+                    <button popover-placement="left" popover-title="The title." popover="On the Left!" class="btn btn-warning btn-gap">Popover on Left</button>
+                    <br>
+                    <button popover="On mouse enter!" popover-trigger="mouseenter" class="btn btn-danger btn-gap">Popover on Mouseenter</button>
+                    <input type="text" value="Popover on Click" popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="focus" class="form-control">
+                </div>
+            </section>
+            <!-- Popover -->
+        </div>
+        <div class="col-md-6">
+            <!-- Tooltip -->
+            <section class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tooltip</div>
+                <div class="panel-body text-center">
+                    <button class="btn btn-default btn-gap" tooltip-placement="top" tooltip="On the Top!">Tooltip on Top</button>
+                    <br>
+                    <button class="btn btn-primary btn-gap" tooltip-placement="left" tooltip="On the Left!">Tooltip on Left</button>
+                    <br>
+                    <button class="btn btn-success btn-gap" tooltip-placement="right" tooltip="On the Right!">Tooltip on Right</button>
+                    <br>
+                    <button class="btn btn-info btn-gap" tooltip-placement="bottom" tooltip="On the Bottom!">Tooltip on Bottom</button>
+                    <br>
+                    <button class="btn btn-warning btn-gap" tooltip-animation="false" tooltip="I don't fade. :-(">Tooltip without Animation</button>
+                    <br>
+                    <button class="btn btn-danger btn-gap" tooltip-popup-delay='1000' tooltip='appears with delay'>Tooltip Delayed</button>
+                </div>
+            </section>
+            <!-- end Tooltip -->
+        </div>
+    </div>
 
     <!-- Tab -->
     <section class="panel panel-default">
@@ -65,61 +143,8 @@
     <!-- end Tab -->
 
 
-    <!-- Notfify -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Notify</div>
-        <div class="panel-body" data-ng-controller="NotifyCtrl">
-            <button class="btn btn-gap btn-info" data-ng-click="notify('info')">Show info message</button>
-            <button class="btn btn-gap btn-success" data-ng-click="notify('success')">Show success message</button>
-            <button class="btn btn-gap btn-warning" data-ng-click="notify('warning')">Show warning message</button>
-            <button class="btn btn-gap btn-danger" data-ng-click="notify('error')">Show error message</button>
-            <div class="callout callout-info">
-                <p>Notification will show in lower right corner.</p>
-            </div>
-        </div>
-    </section>
-    <!-- end Notify -->
-
-
-    <!-- Popover -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Popover</div>
-        <div class="panel-body">
-                <h4>Positional</h4>
-                <button popover-placement="top" popover-title="The title." popover="On the Top!" class="btn btn-primary btn-gap">Popover on Top</button>
-                <button popover-placement="right" popover-title="The title." popover="On the Right!" class="btn btn-info btn-gap">Popover on Right</button>
-                <button popover-placement="bottom" popover-title="The title." popover="On the Bottom!" class="btn btn-success btn-gap">Popover on Bottom</button>
-                <button popover-placement="left" popover-title="The title." popover="On the Left!" class="btn btn-warning btn-gap">Popover on Left</button>
-
-                <hr />
-                <h4>Triggers</h4>
-                <p>
-                    <button popover="On mouse enter!" popover-trigger="mouseenter" class="btn btn-danger">Popover on Mouseenter</button>
-                </p>
-                <input type="text" value="Popover on Click" popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="focus" class="form-control">
-        </div>
-    </section>
-    <!-- Popover -->
-
-    
-    <!-- Tooltip -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Tooltip</div>
-        <div class="panel-body">
-            <button class="btn btn-default btn-gap" tooltip-placement="top" tooltip="On the Top!">Tooltip on Top</button>
-            <button class="btn btn-primary btn-gap" tooltip-placement="left" tooltip="On the Left!">Tooltip on Left</button>
-            <button class="btn btn-success btn-gap" tooltip-placement="right" tooltip="On the Right!">Tooltip on Right</button>
-            <button class="btn btn-info btn-gap" tooltip-placement="bottom" tooltip="On the Bottom!">Tooltip on Bottom</button>
-            <button class="btn btn-warning btn-gap" tooltip-animation="false" tooltip="I don't fade. :-(">Tooltip without Animation</button>
-            <button class="btn btn-danger btn-gap" tooltip-popup-delay='1000' tooltip='appears with delay'>Tooltip Delayed</button>
-        </div>
-    </section>
-    <!-- end Tooltip -->
-
-
     <div class="row">
         <div class="col-md-6">
-
             <!-- Labels -->
             <section class="panel panel-default">
                 <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Labels</div>
@@ -152,7 +177,6 @@
                 </div>
             </section>
             <!-- end Labels -->
-
 
 
             <!-- Modal -->
@@ -268,7 +292,6 @@
     <!-- end Panel -->
 
 
-
     <!-- Pagination -->
     <section class="panel panel-default">
         <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Pagination</div>
@@ -302,25 +325,7 @@
 
 
 
-    <!-- Accordion -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Accordion or Collapse</div>
-        <div class="panel-body" data-ng-controller="AccordionDemoCtrl">
-            <accordion close-others="oneAtATime" class="ui-accordion">
-                <accordion-group heading="Static Header, initially expanded" is-open="true">
-                    This content is straight in the template.
-                </accordion-group>
-                <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                    {{group.content}}
-                </accordion-group>
-            </accordion>
 
-            <hr>
-            <p>Open only one at a time?</p>
-            <label class="switch switch-success"><input type="checkbox" ng-model="oneAtATime"><i></i></label>
-        </div>
-    </section>
-    <!-- end Accordion -->
 
     <!-- Progressbar -->
     <section class="panel panel-default">

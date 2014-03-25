@@ -28,7 +28,8 @@
     "jquery-spinner": "~0.1.5",
     "jquery-steps": "https://github.com/rstaib/jquery-steps.git#~1.0.4",
     "angular-wizard": "~0.3.0",
-    "weather-icons": "~0.0.1"
+    "weather-icons": "~0.0.1",
+    "textAngular": "~1.2.0"
   },
   "resolutions": {
     "jquery": "~1.11.0"

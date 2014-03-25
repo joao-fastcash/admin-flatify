@@ -10,6 +10,10 @@ angular.module('app.controllers', [])
             path = $location.path()
             return _.contains( ['/404', '/pages/500', '/pages/login', '/pages/signin', '/pages/signin1', '/pages/signin2', '/pages/signup', '/pages/signup1', '/pages/signup2', '/pages/lock-screen'], path )
 
+        $scope.main =
+            brand: 'Flatify'
+            name: 'Lisa Doe' # those which uses i18n can not be replaced with two way binding var for now.
+
 ])
 
 .controller('NavCtrl', [
