@@ -1,12 +1,12 @@
 
 // Dependency: https://github.com/seiyria/bootstrap-slider
 
-$handler_width:         15px;
-$color_track:           #eee;
-$color_selection:       $brand-primary;
+$handler_width:                 15px;
+$color_track:                   #eee;
+$color_selection:               $brand-primary;
 
-$line-height-base:      4px;
-$border-radius-base:    4px;
+$line-height-base:              4px;
+$slider-border-radius-base:     $border-radius-base;
 
 // style
 .slider {
@@ -14,7 +14,7 @@ $border-radius-base:    4px;
     vertical-align: middle;
     position: relative;
     &.slider-horizontal {
-        width: 210px !important; // Because CSS style overrides by some script unknown, probably because of the class, i.e. 'slider-horizontal'
+        width: 100% !important; // Because CSS style overrides by some script unknown, probably because of the class, i.e. 'slider-horizontal'
         height: $line-height-base;
         .slider-track {
             height: $line-height-base/2;
@@ -90,14 +90,14 @@ $border-radius-base:    4px;
     cursor: pointer;
     background-color: $color_track;
     @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
-    border-radius: $border-radius-base;
+    border-radius: $slider-border-radius-base;
 }
 .slider-selection {
     position: absolute;
     background-color: $color_selection;
     @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
     @include box-sizing(border-box);
-    border-radius: $border-radius-base;
+    border-radius: $slider-border-radius-base;
 }
 .slider-handle {
     position: absolute;

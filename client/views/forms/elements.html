@@ -2,21 +2,25 @@
 <section class="page-form-ele page">
 
 
-    <!-- Editor -->
-    <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Editor</strong></div>
-        <div class="panel-body">
-            <div text-angular ng-model="mailContent" class="ui-editor"></div>
+
+    <!-- Tags -->
+<!--     <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Tags Input</strong></div>
+        <div class="panel-body" data-ng-controller="TagsDemoCtrl">
+            <bootstrap-tagsinput ng-model="cities"
+                                 tagclass="getTagClass"
+                                 itemvalue="value"
+                                 itemtext="text"></bootstrap-tagsinput>
         </div>
-    </section>
-    <!-- end Editor -->
+    </section>  -->
+    <!-- end Tags -->
 
 
     <!-- Rating -->
     <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Rating</strong></div>
         <div class="panel-body" data-ng-controller="RatingDemoCtrl">
-            <rating class="ui-rating size-h2"
+            <rating class="ui-rating size-h3"
                     value="rate"
                     max="max"
                     readonly="isReadonly"
@@ -67,7 +71,7 @@
                            data-slider-max="10"
                            data-slider-step="1"
                            data-slider-orientation="horizontal"
-                           data-slider-value="5"
+                           data-slider-value="6"
                            data-slider-selection="before"
                            data-slider-tooltip="show"
                            data-slider-handle="round">
@@ -91,7 +95,7 @@
                            data-slider-max="100"
                            data-slider-step="10"
                            data-slider-orientation="horizontal"
-                           data-slider-value="50"
+                           data-slider-value="60"
                            data-slider-selection="before"
                            data-slider-tooltip="show"
                            data-slider-handle="round">
@@ -564,5 +568,15 @@
         </div>
     </section>
     <!-- end Upload -->
+
+
+    <!-- Editor -->
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Editor</strong></div>
+        <div class="panel-body">
+            <div text-angular ng-model="mailContent" class="ui-editor"></div>
+        </div>
+    </section>
+    <!-- end Editor -->
 
 </section>
