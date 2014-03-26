@@ -38,6 +38,12 @@
         @include border-right-radius ($border-radius-base);
     }
 
+    &.info-box {
+        i {
+            line-height: 65px;
+        }
+    }
+
     .panel-top,
     .panel-bottom {
         display: block;

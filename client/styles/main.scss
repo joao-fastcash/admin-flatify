@@ -6,10 +6,10 @@
 
 @import "compass/css3";
 @import
-// UI, uses Bootstrap's variables
+    // UI, uses Bootstrap's variables
     "ui/ui"
 
-// Plugins, overrides plugins' style
+    // Plugins, overrides plugins' style
 ,   "plugins/bootstrap-slider"
 ,   "plugins/responsive-tables"
 ,   "plugins/easypiecharts"
@@ -18,7 +18,7 @@
 ,   "plugins/jquery-steps"
 // ,   "plugins/angular-wizard"
 
-// Pages 
+    // Pages 
 ,   "pages/dashboard"
 ,   "pages/pages"
 ,   "pages/err"
@@ -29,7 +29,7 @@
 ,   "pages/ui"
 ,   "pages/demo"
 
-// sections
+    // sections
 ,   "sections/nav"
 ,   "sections/header"
 ,   "sections/content"
