@@ -45,6 +45,14 @@ span.block {
     background-color: $brand-danger;
     color: $reverse;
 }
+.bg-orange {
+    background-color: $color-orange;
+    color: $reverse;
+}
+.bg-violet {
+    background-color: $color-violet;
+    color: $reverse;    
+}
 .bg-reverse {
     background-color: $reverse;
     color: $text-color;

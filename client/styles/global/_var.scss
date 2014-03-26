@@ -24,6 +24,8 @@ $brand-info-alt:        #927ED1 !default;
 $brand-warning:         #FDD761 !default;
 $brand-danger:          #FF7857 !default;
 
+$color-orange:          #FE9950;
+$color-violet:          #927ED1;
 
 // $skin-darker:           #
 // $skin-dark:             #;
@@ -31,6 +33,7 @@ $skin:                  $brand-primary;
 $skin-light:            #9A81D5;
 // $skin-lighter:          #
 // $skin-bright:           #
+$dark:                  #25313e;
 $reverse:               #fff;
 
 //== Scaffolding
@@ -38,7 +41,7 @@ $reverse:               #fff;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #f1f2f3 !default;
+$body-bg:               #f7f7f7 !default;
 //** Global text color on `<body>`.
 $text-color:            #767676 !default;
 
@@ -58,7 +61,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          13px !default;
+$font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -108,9 +111,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-base:        2px !default;
+$border-radius-large:       2px !default;
+$border-radius-small:       2px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -150,8 +153,8 @@ $table-border-color:            #ddd !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #fff !default;
-$btn-default-bg:                 #c7cbd6 !default;
+$btn-default-color:              $text-color !default;
+$btn-default-bg:                 #fafafa !default;
 $btn-default-border:             darken($btn-default-bg, 5%) !default;
 
 $btn-primary-color:              #fff !default;

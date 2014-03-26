@@ -1,6 +1,7 @@
-$nav_bg:                #34323A;
+$nav_bg:                #fefefe;
+$nav_border:            #ececec;
 $sub_nav_bg:            darken($nav_bg, 5%);
-$link_color:            #AEB2B7;
+$link_color:            $text-color;
 $link_active_bg:        $sub_nav_bg;
 
 .on-canvas #nav-container {
@@ -10,7 +11,7 @@ $link_active_bg:        $sub_nav_bg;
 #nav-container {
     z-index: 11; // should be highter than top header
     position: absolute;
-    top: 80px;
+    top: $header_height;
     bottom: 0;
     left: -220px;
     width: 220px;
@@ -33,17 +34,16 @@ $link_active_bg:        $sub_nav_bg;
     padding: 0;
     -webkit-overflow-scrolling: touch;
     -webkit-overflow-scrolling: -blackberry-touch;
+    border-right: 2px solid $nav_border;
 
     >li>a>i,
     >li>a>.nav-icon {
         display: inline;
         margin-right: 6px;
-        font-size: 15px;
         line-height: 1;
     }
 
     a {
-        font-size: 12px;
         color: $link_color;
         &:hover {
             text-decoration: none;
@@ -54,7 +54,7 @@ $link_active_bg:        $sub_nav_bg;
         position: relative;
         margin: 0;
         text-align: left;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        font-weight: bold;
         // &.open {
         //     ul {
         //         display: block;
@@ -62,11 +62,18 @@ $link_active_bg:        $sub_nav_bg;
         //     }
         // }
         &.open,
+        &.active,
         &:hover {
             > a {
                 background-color: $link_active_bg;
-                color: $reverse;
-                font-weight: bold;
+                > i {
+                    &:before {
+                        color: $reverse;
+                    }
+                    .icon-bg {
+                        left: 0;
+                    }
+                }
             }
         }
         &:first-child > a {
@@ -75,8 +82,32 @@ $link_active_bg:        $sub_nav_bg;
         >a {
             position: relative;
             display: block;
-            padding: 18px 0 18px 25px;
+            padding: 11px 15px;
+            border-bottom: 1px solid $nav_border;
             @include transition( all .15s ease-in-out);
+
+            > i {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                border-right: 1px solid $nav_border;
+                line-height: 44px;
+                text-align: center;
+                margin: -12px 10px -12px -15px;
+                &:before {
+                    position: relative;
+                    z-index: 1;
+                }
+                .icon-bg {
+                    position: absolute;
+                    z-index: 0;
+                    left: -42px;
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                    @include transition(left .15s ease-in-out);
+                }
+            }
 
             > .badge {
                 position: absolute;
@@ -84,13 +115,7 @@ $link_active_bg:        $sub_nav_bg;
                 right: 5px;
             }
         }
-        &.active {
-            >a {
-                background-color: $link_active_bg;
-                color: $reverse;
-                font-weight: bold;
-            }
-        }
+
 
         > .icon-has-ul {
             position: absolute;
@@ -104,13 +129,16 @@ $link_active_bg:        $sub_nav_bg;
         background-color: $sub_nav_bg;
         display: none;
 
+        a {
+            font-size: 13px;
+        }
+
         li {
             position: relative;
             padding: 0;
             &:hover,
             &.active {
                 a {
-                    color: $reverse;
                     background-color: darken($sub_nav_bg, 5%);
                 }
             }
@@ -138,7 +166,5 @@ $link_active_bg:        $sub_nav_bg;
                 }
             }
         }
-
-
     }
 }

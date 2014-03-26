@@ -9,7 +9,7 @@
 
 #content {
     position: absolute;
-    top: 160px;
+    top: ($header_height * 2);
     right: 0;
     bottom: 0;
     width: 100%;
@@ -19,7 +19,7 @@
     -webkit-overflow-scrolling: -blackberry-touch;
     // @include transition(left .3s ease-in-out);
     @media (min-width:$screen-sm) {
-        top: 80px;
+        top: $header_height;
         width: auto;
         left: 220px;
     }
