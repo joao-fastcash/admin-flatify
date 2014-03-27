@@ -12,7 +12,7 @@ angular.module('app.chart.ctrls', [])
                 animate:
                     duration: 1000
                     enabled: true
-                barColor: '#674E9E'
+                barColor: '#1C7EBB'
                 lineCap: 'round'
                 size: 180
                 lineWidth: 5
@@ -23,7 +23,7 @@ angular.module('app.chart.ctrls', [])
                 animate:
                     duration: 1000
                     enabled: true
-                barColor: '#A3C86D'
+                barColor: '#23AE89'
                 lineCap: 'round'
                 size: 180
                 lineWidth: 10
@@ -34,7 +34,7 @@ angular.module('app.chart.ctrls', [])
                 animate:
                     duration: 1000
                     enabled: true
-                barColor: '#7ACBEE'
+                barColor: '#2EC1CC'
                 lineCap: 'square'
                 size: 180
                 lineWidth: 20
@@ -233,6 +233,13 @@ angular.module('app.chart.ctrls', [])
                     align: "center"
                     horizontal: false
                     order: 1
+            grid:
+                hoverable: true
+                borderWidth: 1
+                borderColor: "#eeeeee"
+            tooltip: true
+            tooltipOpts:
+                defaultTheme: false  
             colors: ["#A3C86D", "#7ACBEE", "#FDD761","#FF7857"]
 
 
@@ -263,6 +270,7 @@ angular.module('app.chart.ctrls', [])
             colors: ["#A3C86D", "#7ACBEE", "#FDD761", "#FF7857"]
             tooltip: true
             tooltipOpts:
+                content: "%p.0%, %s" # thanks https://github.com/krzysu/flot.tooltip/issues/25
                 defaultTheme: false            
 
 
@@ -294,6 +302,7 @@ angular.module('app.chart.ctrls', [])
             colors: ["#A3C86D", "#7ACBEE", "#FDD761", "#FF7857"]
             tooltip: true
             tooltipOpts:
+                content: "%p.0%, %s"
                 defaultTheme: false
 
 ])
