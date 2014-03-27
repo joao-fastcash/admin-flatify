@@ -313,7 +313,7 @@ angular.module('app.chart.ctrls', [])
                 type: 'line'
                 lineColor: '#fff'
                 highlightLineColor: '#fff'
-                fillColor: '#A3C86D'
+                fillColor: '#23AE89'
                 spotColor: false
                 minSpotColor: false
                 maxSpotColor: false
