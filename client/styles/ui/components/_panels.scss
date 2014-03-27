@@ -1,16 +1,11 @@
 // overrides Bootstrap
 .panel {
     .panel-heading {
-        padding: 15px;
         text-transform: uppercase;
     }
 
     .panel-title {
         font-size: $font-size-base;
-    }
-
-    .panel-footer {
-        padding: 15px;
     }
 }
 

@@ -25,3 +25,22 @@ angular.module('app.ui.directives', [])
             startTime()
     }
 ])
+
+.directive('uiWeather', [ ->
+    return {
+        restrict: 'A'
+        link: (scope, ele, attrs) ->
+            color = attrs.color
+            # CLEAR_DAY, CLEAR_NIGHT, PARTLY_CLOUDY_DAY, PARTLY_CLOUDY_NIGHT, CLOUDY
+            # RAIN, SLEET, SNOW, WIND, FOG
+            icon = Skycons[attrs.icon]
+
+            skycons = new Skycons({
+                "color": color
+                "resizeClear": true
+            })
+
+            skycons.add(ele[0], icon)
+            skycons.play()
+    }
+])

@@ -12,10 +12,11 @@
     left: 0;
     right: 0;
     height:( $header_height * 2);
-    background-color: $dark;
+    background-color: $reverse;
     @include box-shadow(0 1px 2px rgba(0,0,0,.1));
     @media (min-width:$screen-sm) {
         height: $header_height;
+        background-color: $dark;
     }
 
     // shared
@@ -50,10 +51,10 @@
         a {
             font-size: 24px;
             vertical-align: middle;
-            color: $reverse;
+            color: $bright;
 
             .logo-icon {
-                color: lighten($brand-primary, 35%);
+                color: $bright;
                 margin-right: 12px;
             }
         }

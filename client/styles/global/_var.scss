@@ -46,7 +46,7 @@ $state-default-border:  darken(adjust-hue($state-default-bg, -10), 5%);
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $bright !default;
+$body-bg:               #f3f3f3 !default;
 //** Global text color on `<body>`.
 $text-color:            #767676 !default;
 

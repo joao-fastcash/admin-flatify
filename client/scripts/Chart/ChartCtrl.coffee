@@ -193,7 +193,7 @@ angular.module('app.chart.ctrls', [])
                 tickColor: "#f9f9f9"
                 borderWidth: 1
                 borderColor: "#eeeeee"
-            colors: ["#A3C86D", "#FF7857"]
+            colors: ["#23AE89", "#6A55C2"]
             tooltip: true
             tooltipOpts:
                 defaultTheme: false
@@ -240,7 +240,7 @@ angular.module('app.chart.ctrls', [])
             tooltip: true
             tooltipOpts:
                 defaultTheme: false  
-            colors: ["#A3C86D", "#7ACBEE", "#FDD761","#FF7857"]
+            colors: ["#23AE89", "#2EC1CC", "#FFB61C","#E94B3B"]
 
 
         # Pie Chart
@@ -267,7 +267,7 @@ angular.module('app.chart.ctrls', [])
             grid:
                 hoverable: true
                 clickable: true
-            colors: ["#A3C86D", "#7ACBEE", "#FDD761", "#FF7857"]
+            colors: ["#23AE89", "#2EC1CC", "#FFB61C","#E94B3B"]
             tooltip: true
             tooltipOpts:
                 content: "%p.0%, %s" # thanks https://github.com/krzysu/flot.tooltip/issues/25
@@ -299,7 +299,7 @@ angular.module('app.chart.ctrls', [])
             grid:
                 hoverable: true
                 clickable: true
-            colors: ["#A3C86D", "#7ACBEE", "#FDD761", "#FF7857"]
+            colors: ["#23AE89", "#2EC1CC", "#FFB61C","#E94B3B"]
             tooltip: true
             tooltipOpts:
                 content: "%p.0%, %s"
