@@ -29,6 +29,10 @@ span.block {
     background-color: $brand-primary;
     color: $reverse;
 }
+.bg-primary-light {
+    background-color: $skin-light;
+    color: $reverse;
+}
 .bg-success {
     background-color: $brand-success;
     color: $reverse;
@@ -45,6 +49,7 @@ span.block {
     background-color: $brand-danger;
     color: $reverse;
 }
+
 .bg-orange {
     background-color: $color-orange;
     color: $reverse;
@@ -53,10 +58,20 @@ span.block {
     background-color: $color-violet;
     color: $reverse;    
 }
+
+.bg-dark {
+    background-color: $dark;
+    color: $reverse;
+}
+.bg-bright {
+    background-color: $bright;
+    color: $text-color;    
+}
 .bg-reverse {
     background-color: $reverse;
     color: $text-color;
 }
+
 .bg-facebook {
     background-color: #335397;
     color: $reverse;

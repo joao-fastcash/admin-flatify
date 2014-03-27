@@ -1,9 +1,6 @@
 // Build on top of Bootstrap 3
 // --------------------------------------------------
 
-// $base:                  #333;
-// $reverse:               #fff;
-
 
 // Skin
 // -------------------------
@@ -12,6 +9,7 @@
 // $brand-primary:         #428bca !default;
 // $brand-success:         #5cb85c !default;
 // $brand-info:            #5bc0de !default;
+// $brand-info-alt:        #;
 // $brand-warning:         #f0ad4e !default;
 // $brand-danger:          #d9534f !default;
 
@@ -24,7 +22,11 @@
 
 // $dark:                  #; // background
 // $bright:                #; // background (e.g. body, btn-default)
-// $color_border:             // 
+// $color_border:             // (input border, table border)
+
+// $text-color
+// $state-default-bg:               // also: Panel-default bg, Tab bg, Pagination bg, Accordion/collapse bg, breadcrumb
+// $state-default-border:           darken(adjust-hue($state-default-bg, -10), 5%); // Panel, Tab, Accordion, Breadcrumb border
 
 //=== Secondary colors. Used on Alert, Panel heading, Table rows, (Maybe callout)
 // $state-success-text:             #3c763d !default;

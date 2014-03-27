@@ -17,31 +17,36 @@ $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
-$brand-primary:         #674E9E !default;
-$brand-success:         #A3C86D !default;
-$brand-info:            #7ACBEE !default;
-$brand-info-alt:        #927ED1 !default;
-$brand-warning:         #FDD761 !default;
-$brand-danger:          #FF7857 !default;
+$brand-primary:         #1C7EBB !default;
+$brand-success:         #23AE89 !default;
+$brand-info:            #2EC1CC !default;
+$brand-info-alt:        #6A55C2 !default;
+$brand-warning:         #FFB61C !default;
+$brand-danger:          #E94B3B !default;
 
-$color-orange:          #FE9950;
-$color-violet:          #927ED1;
+$color-orange:          #F98E33;
+$color-violet:          $brand-info-alt;
 
 // $skin-darker:           #
 // $skin-dark:             #;
 $skin:                  $brand-primary;
-$skin-light:            #9A81D5;
+$skin-light:            #449DD5;
 // $skin-lighter:          #
 // $skin-bright:           #
-$dark:                  #25313e;
+$dark:                  #222533;
+$bright:                #fafafa;
 $reverse:               #fff;
+
+$state-default-bg:      #f6f6f6; // also: pagination bg
+$state-default-border:  darken(adjust-hue($state-default-bg, -10), 5%); 
+
 
 //== Scaffolding
 //
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #f7f7f7 !default;
+$body-bg:               $bright !default;
 //** Global text color on `<body>`.
 $text-color:            #767676 !default;
 
@@ -154,7 +159,7 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              $text-color !default;
-$btn-default-bg:                 #fafafa !default;
+$btn-default-bg:                 $bright !default;
 $btn-default-border:             darken($btn-default-bg, 5%) !default;
 
 $btn-primary-color:              #fff !default;
@@ -192,7 +197,7 @@ $input-bg-disabled:              $gray-lighter !default;
 //** Text color for `<input>`s
 $input-color:                    $text-color !default;
 //** `<input>` border color
-$input-border:                   #e2e2e4 !default;
+$input-border:                   #CBD5DD !default;
 //** `<input>` border radius
 $input-border-radius:            $border-radius-base !default;
 //** Border color for inputs on focus
@@ -435,8 +440,8 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 //##
 
 $pagination-color:                     $link-color !default;
-$pagination-bg:                        #EFF2F7 !default;
-$pagination-border:                    #EFF2F7 !default;
+$pagination-bg:                        $state-default-bg !default;
+$pagination-border:                    $state-default-bg !default;
 
 $pagination-hover-color:               $reverse !default;
 $pagination-hover-bg:                  $brand-primary !default;
@@ -447,8 +452,8 @@ $pagination-active-bg:                 $brand-primary !default;
 $pagination-active-border:             $brand-primary !default;
 
 $pagination-disabled-color:            $gray-light !default;
-$pagination-disabled-bg:               #EFF2F7 !default;
-$pagination-disabled-border:           #EFF2F7 !default;
+$pagination-disabled-bg:               $state-default-bg !default;
+$pagination-disabled-border:           $state-default-bg !default;
 
 
 //== Pager
@@ -482,20 +487,20 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #70844B !default;
-$state-success-bg:               #F3F9E4 !default;
+$state-success-text:             #229173 !default;
+$state-success-bg:               #F2FCF9 !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                #4A7A91 !default;
-$state-info-bg:                  #EBF8FB !default;
+$state-info-text:                #26929C !default;
+$state-info-bg:                  #EEF8FC !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #947F3B !default;
-$state-warning-bg:               #FCF7E6 !default;
+$state-warning-text:             #AF7F18 !default;
+$state-warning-bg:               #FFFAF0 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #AA513D !default;
-$state-danger-bg:                #F6EBE9 !default;
+$state-danger-text:              #B13D31 !default;
+$state-danger-bg:                #FDEFEE !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
@@ -683,12 +688,12 @@ $panel-body-padding:          15px !default;
 $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
-$panel-inner-border:          #eff2f7 !default;
+$panel-inner-border:          $state-default-border !default;
 $panel-footer-bg:             #fafafa !default;
 
 $panel-default-text:          $text-color !default;
-$panel-default-border:        #eff2f7 !default;
-$panel-default-heading-bg:    #fafafa !default;
+$panel-default-border:        $state-default-border !default;
+$panel-default-heading-bg:    $state-default-bg !default;
 
 $panel-primary-text:          #fff !default;
 $panel-primary-border:        $brand-primary !default;
@@ -764,9 +769,9 @@ $badge-border-radius:         10px !default;
 $breadcrumb-padding-vertical:   8px !default;
 $breadcrumb-padding-horizontal: 15px !default;
 //** Breadcrumb background color
-$breadcrumb-bg:                 #f5f5f5 !default;
+$breadcrumb-bg:                 $state-default-bg !default;
 //** Breadcrumb text color
-$breadcrumb-color:              #ccc !default;
+$breadcrumb-color:              $state-default-border !default;
 //** Text color of current page in the breadcrumb
 $breadcrumb-active-color:       $gray-light !default;
 //** Textual separator for between breadcrumb elements
