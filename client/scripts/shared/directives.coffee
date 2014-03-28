@@ -69,30 +69,56 @@ angular.module('app.directives', [])
 ])
 
 # for mini style NAV
-.directive('toggleMinNav', [ ->
-    return {
-        restrict: 'A'
-        compile: (ele, attrs) ->
-            app = $('#app')
+.directive('toggleMinNav', [ 
+    '$rootScope'
+    ($rootScope) ->
+        return {
+            restrict: 'A'
+            link: (scope, ele, attrs) ->
+                app = $('#app')
+                $window = $(window)
+                # nav = $('#nav ul') # failt to get it 
 
-            ele.on('click', (e) ->
-                app.toggleClass('nav-min')
-                e.preventDefault()
-            )
-    }
+                ele.on('click', (e) ->
+                    if app.hasClass('nav-min')
+                        app.removeClass('nav-min')
+                    else
+                        app.addClass('nav-min')
+                        $rootScope.$broadcast('minNav:enabled')
+
+                    e.preventDefault()
+                )
+
+                # removeClass('nav-min') when size < $screen-sm
+                Timer = undefined
+                updateClass = ->
+                    width = $window.width()
+                    # console.log(width)
+                    if width < 768 then app.removeClass('nav-min')
+                $window.resize( () ->
+                    clearTimeout(t)
+                    t = setTimeout(updateClass, 300)
+                )
+        }
 ])
 # for accordion/collapse style NAV
 .directive('collapseNav', [ ->
     return {
         restrict: 'A'
-        compile: (ele, attrs) ->
+        link: (scope, ele, attrs) ->
             $lists = ele.find('ul').parent('li') # only target li that has sub ul
             $lists.append('<i class="fa fa-caret-right icon-has-ul"></i>')
             $a = $lists.children('a')
             $listsRest = ele.children('li').not($lists)
             $aRest = $listsRest.children('a')
 
+            app = $('#app')
+
             $a.on('click', (event) ->
+
+                # disable click event when Nav is in mini style
+                if ( app.hasClass('nav-min') ) then return false
+
                 $this = $(this)
                 $parent = $this.parent('li')
                 $lists.not( $parent ).removeClass('open').find('ul').slideUp()
@@ -102,6 +128,11 @@ angular.module('app.directives', [])
             )
 
             $aRest.on('click', (event) ->
+                $lists.removeClass('open').find('ul').slideUp()
+            )
+
+            # reset collapse NAV, sub Ul should slideUp
+            scope.$on('minNav:enabled', (event) ->
                 $lists.removeClass('open').find('ul').slideUp()
             )
 
