@@ -21,6 +21,8 @@
 
     // shared
     a {
+
+
         &:hover {
             text-decoration: none;
         }
@@ -146,6 +148,7 @@
                 }
 
                 a {
+
                     &:hover,
                     &:focus {
                         text-decoration: none;
@@ -155,11 +158,14 @@
                 > .btn-group > a,
                 > a {
                     position: relative;
+                    background-color: $gray-lighter;
                     display: block;
                     padding: 4px 8px;
-                    background-color: $gray-lighter;
                     border-radius: 22px;
-
+                    @media (min-width: $screen-sm) {
+                        background-color: transparent;
+                        color: $bright;
+                    }
 
                     .badge {
                         position: absolute;
@@ -169,7 +175,7 @@
                 }
 
                 ul.dropdown-menu {
-                    margin-top: 2px;
+                    // margin-top: 12px;
                     
                     a:hover {
                         background-color: $skin;
