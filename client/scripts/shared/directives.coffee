@@ -68,7 +68,20 @@ angular.module('app.directives', [])
     }
 ])
 
+# for mini style NAV
+.directive('toggleMinNav', [ ->
+    return {
+        restrict: 'A'
+        compile: (ele, attrs) ->
+            app = $('#app')
 
+            ele.on('click', (e) ->
+                app.toggleClass('nav-min')
+                e.preventDefault()
+            )
+    }
+])
+# for accordion/collapse style NAV
 .directive('collapseNav', [ ->
     return {
         restrict: 'A'

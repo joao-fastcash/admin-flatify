@@ -14,8 +14,6 @@
 
     // shared
     a {
-
-
         &:hover {
             text-decoration: none;
         }
@@ -28,7 +26,20 @@
         }
     }
 
-    // .nav-icon { font-size: 18px; }
+    .toggle-min {
+        display: none;
+        z-index: 11;
+        position: absolute;
+        left: 180px;
+        top: 10px;
+        line-height: 30px;
+        font-size: 18px;
+        color: #ccc;
+        @media (min-width:$screen-sm) {
+            display: block;
+        }
+
+    }
 
     //
     .logo {
@@ -43,7 +54,7 @@
             width: 220px;
         }
 
-        a {
+        > a {
             font-size: 24px;
             vertical-align: middle;
             color: $bright;
