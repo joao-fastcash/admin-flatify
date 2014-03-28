@@ -56,12 +56,6 @@
 @include make-grid(xs);
 
 
-// XSmall grid
-$screen-xsm-min:      480px;
-@media (min-width: $screen-xsm-min) {
-  @include make-grid(xsm);
-}
-
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
