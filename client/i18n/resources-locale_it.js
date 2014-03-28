@@ -53,5 +53,16 @@
     "data": "Data",
     "realtime data": "Dati in tempo reale",
     "table": "Table",
-    "progress": "Progress"
+    "progress": "Progress",
+    "log out": "log out",
+    "lock": "blocco",
+    "lock screen": "blocco schermo",
+    "invoice": "fattura",
+    "blank page": "pagina bianca",
+    "lisa doe": "lisa doe",
+    "inbox": "Posta in arrivo",
+    "compose": "comporre",
+    "single mail": "plico unico",
+    "mail": "posta",
+    "timeline": "timeline"
 }

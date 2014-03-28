@@ -53,5 +53,16 @@
     "data": "Дата",
     "realtime data": "Realtime данных",
     "table": "Таблица",
-    "progress": "Прогресс"
+    "progress": "Прогресс",
+    "log out": "выйти",
+    "lock": "замок",
+    "lock screen": "блокировки экрана",
+    "invoice": "счет-фактура",
+    "blank page": "пустая страница",
+    "lisa doe": "Лиза лань",
+    "inbox": "Входящие",
+    "compose": "сочинять",
+    "single mail": "сингл почта",
+    "mail": "Почта",
+    "timeline": "Временная шкала"
 }

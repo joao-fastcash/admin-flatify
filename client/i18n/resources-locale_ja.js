@@ -53,5 +53,16 @@
     "data": "日付",
     "realtime data": "リアルタイム·データ",
     "table": "表",
-    "progress": "進行"
+    "progress": "進行",
+    "log out": "ログアウト",
+    "lock": "ロック",
+    "lock screen": "ロック画面",
+    "invoice": "請求書",
+    "blank page": "空白のページ",
+    "lisa doe": "リサのDOE",
+    "inbox": "受信トレイ",
+    "compose": "作曲",
+    "single mail": "単一のメール",
+    "mail": "メール",
+    "timeline": "タイムライン"
 }

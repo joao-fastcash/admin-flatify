@@ -53,5 +53,16 @@
     "data": "Fecha",
     "realtime data": "Los datos en tiempo real",
     "table": "Tabla",
-    "progress": "Progreso"
+    "progress": "Progreso",
+    "log out": "log out",
+    "lock": "bloqueo",
+    "lock screen": "pantalla de bloqueo",
+    "invoice": "factura",
+    "blank page": "página en blanco",
+    "lisa doe": "doe lisa",
+    "inbox": "bandeja de entrada",
+    "compose": "componer",
+    "single mail": "correo single",
+    "mail": "Correo",
+    "timeline": "línea de tiempo"
 }

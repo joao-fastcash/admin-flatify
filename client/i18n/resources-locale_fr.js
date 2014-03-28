@@ -53,5 +53,16 @@
     "data": "Date",
     "realtime data": "données en temps réel",
     "table": "tableau",
-    "progress": "Progress"
+    "progress": "Progress",
+    "log out": "déconnecter",
+    "lock": "verrouiller",
+    "lock screen": "verrouillage de l'écran",
+    "invoice": "facture",
+    "blank page": "page blanche",
+    "lisa doe": "biche lisa",
+    "inbox": "boîte de réception",
+    "compose": "composer",
+    "single mail": "courrier simple",
+    "mail": "Mail",
+    "timeline": "chronologie"
 }

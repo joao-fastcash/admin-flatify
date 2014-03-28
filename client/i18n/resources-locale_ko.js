@@ -53,5 +53,16 @@
     "data": "날짜",
     "realtime data": "실시간 데이터",
     "table": "표",
-    "progress": "진행"
+    "progress": "진행",
+    "log out": "로그 아웃",
+    "lock": "잠금",
+    "lock screen": "화면 잠금",
+    "invoice": "송장",
+    "blank page": "빈 페이지",
+    "lisa doe": "리사 미상",
+    "inbox": "받은 편지함",
+    "compose": "구성",
+    "single mail": "하나의 메일",
+    "mail": "메일",
+    "timeline": "타임 라인"
 }

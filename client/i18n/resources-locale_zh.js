@@ -53,5 +53,16 @@
     "data": "數據",
     "realtime data": "實時數據",
     "table": "表",
-    "progress": "進步"
+    "progress": "進步",
+    "log out": "退出",
+    "lock": "鎖定",
+    "lock screen": "鎖定屏幕",
+    "invoice": "發票",
+    "blank page": "空白頁",
+    "lisa doe": "伊麗莎",
+    "inbox": "收件箱",
+    "compose": "撰寫",
+    "single mail": "單個郵件",
+    "mail": "郵件",
+    "timeline": "時間線"
 }
