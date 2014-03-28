@@ -1,10 +1,3 @@
-.on-canvas .top-header .top-nav {
-    margin-left: 220px;
-    @media (min-width:$screen-sm) {
-        margin-left: 0;
-    }
-}
-
 .top-header {
     z-index: 10;
     position: absolute;
@@ -73,7 +66,7 @@
         border-radius: 4px;
         &:hover {
             cursor: pointer;
-            background-color: darken($skin, 10%);
+            background-color: darken($dark, 5%);
         }
 
         .icon-bar {
