@@ -91,10 +91,12 @@ $link_active_bg:        $sub_nav_bg;
 
             > i {
                 position: relative;
-                display: inline-block;
+                display: block;
+                float: left;
                 width: 50px;
-                border-right: 1px solid $nav_border;
+                height: 50px;
                 line-height: 50px;
+                border-right: 1px solid $nav_border;
                 text-align: center;
                 margin: -15px 10px -15px -15px;
                 &:before {
@@ -103,6 +105,7 @@ $link_active_bg:        $sub_nav_bg;
                 }
                 .icon-bg {
                     position: absolute;
+                    z-index: 12;
                     z-index: 0;
                     left: -47px;
                     width: 100%;

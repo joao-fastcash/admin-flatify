@@ -14,6 +14,11 @@
             overflow: visible !important;
             > li {
                 width: 50px;
+                // &:first-child {
+                //     > a {
+                //         background-color: $brand-danger;
+                //     }
+                // }
                 > a {
                     > i {
                         &:before {
@@ -43,10 +48,10 @@
 
                 &:hover,
                 &.open {
-                    > a {
-                        > i {
-                        }
-                    }
+                    // > a {
+                    //     > i {
+                    //     }
+                    // }
                     > ul {
                         display: block !important;
                     }
