@@ -305,6 +305,41 @@ angular.module('app.chart.ctrls', [])
                 content: "%p.0%, %s"
                 defaultTheme: false
 
+        # Donut Chart2
+        $scope.donutChart2 = {}
+        $scope.donutChart2.data = [
+            label: "Download Sales"
+            data: 12
+        ,
+            label: "In-Store Sales"
+            data: 30
+        ,
+            label: "Mail-Order Sales"
+            data: 20
+        ,
+            label: "Online Sales"
+            data: 19
+        ,
+            label: "Direct Sales"
+            data: 15  
+        ]
+        $scope.donutChart2.options =
+            series:
+                pie:
+                    show: true
+                    innerRadius: 0.45
+            legend:
+                show: false
+            grid:
+                hoverable: true
+                clickable: true
+            colors: ["#176799", "#2F87B0", "#42A4BB","#5BC0C4", "#78D6C7"]
+            tooltip: true
+            tooltipOpts:
+                content: "%p.0%, %s"
+                defaultTheme: false
+
+
 ])
 .controller('flotChartCtrl.realtime', [
     '$scope'
