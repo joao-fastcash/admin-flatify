@@ -28,19 +28,19 @@ block docs-sidebar
 
 block content
     //- variables
-    - var name = "iFlat"
+    - var name = "Flatify"
+    - var processor = 'Sass' // you also need to update the offical site link if you switch to LESS, i.e. change to lesscss.org
 
     section#thanks
         .page-header
             h1 Thank you
         p.lead Thank you for purchasing. If you have any questions that are beyond the scope of this documentation, please feel free to contact me.
-        p.lead By the way, if you like the template, please star it ★★★★★, Thank you so much! :)
         
 
     section#intro
         .page-header
             h1 Introduction
-        p.lead "#{name}" is a fully responsive admin web App built with AngularJS. It use Sass CSS which makes it easy to modify.
+        p.lead "#{name}" is a fully responsive admin web App built with AngularJS. It use #{processor} CSS which makes it easy to modify.
 
 
     section#feat
@@ -48,17 +48,19 @@ block content
             h1 Features
         ul
             li 
+                strong Responsive Design.
+            li 
                 strong Web App
                 |  (Single Page Application) Built with 
-                strong AngularJS
-            li 
-                strong Fully AJAX
+                strong AngularJS.
+                strong  Fully AJAX
                 |  powered, never refresh the entire page again. Faster, smoother.
             li 
                 strong Runnable Task Application.
                 |  Try it out.
-            li Internationalization (i18n) and Localization (l10n) support. Add 
-                strong English, Español(Spanish), 日本語(Japanese), 中文(Chinese), Deutsch(German), français(French), Italiano(Italian), Portugal(Portuguese), Русский язык(Russian), 한국어(Korean)
+            li 
+                strong Internationalization (i18n) and Localization (l10n) support.  
+                |  Add English, Español(Spanish), 日本語(Japanese), 中文(Chinese), Deutsch(German), français(French), Italiano(Italian), Portugal(Portuguese), Русский язык(Russian), 한국어(Korean)
                 |  for demo.
             li Solid Workflow with 
                 a(href="http://yeoman.io/") Yeoman
@@ -73,21 +75,21 @@ block content
                 strong Realtime
                 |  Form Validation.
             li Build with 
-                strong Sass CSS
+                strong #{processor} CSS
                 |  (Scss files are included). Easy modification with variables.
             li 
-                strong Multiple Colors
-                | , and you can 
+                strong Multiple Colors support
+                | , you can 
                 strong build your own
                 |  by change a few variables.
             li 
-                strong Responsive
-                |  Design.
+                strong Many 
+                |  widgets and components.
             li 
                 strong Light
                 |  Weight.
             li Built with Bootstrap 3.
-            li HTML5 and CSS3
+            li Valid HTML5 and CSS3
             li Cross Browsers 
             li And much more.
  
@@ -167,34 +169,35 @@ block content
             a(href="http://bower.io/search/") click here. Search the package and click the link to know more.
         pre 
             |   "dependencies": {
-            |      "jquery": "~1.11.0",
-            |      "angular": "~1.2.0",
-            |      "angular-resource": "~1.2.0",
-            |      "angular-cookies": "~1.2.0",
-            |      "angular-sanitize": "~1.2.0",
-            |      "angular-route": "~1.2.0",
-            |      "angular-animate": "~1.2.0",
-            |      "font-awesome": "~4.0.3",
-            |      "toastr": "~2.0.1",
-            |      "underscore": "~1.5.2",
-            |      "ion-range-slider": "~1.8.2",
-            |      "seiyria-bootstrap-slider": "~1.9.0",
-            |      "bootstrap": "~3.1.0",
-            |      "angular-bootstrap": "~0.10.0",
-            |      "bootstrap-file-input": "*",
-            |      "holderjs": "~2.3.1",
-            |      "jquery.easy-pie-chart": "~2.1.4",
-            |      "morris.js": "~0.4.3",
-            |      "jquery.nicescroll": "*",
-            |      "jquery.ui": "~1.10.4",
-            |      "jquery.slimscroll": "~1.3.1",
-            |      "jquery.easing": "~1.3.0",
-            |      "moment": "~2.5.1",
-            |      "gauge.js": "~1.0.0",
-            |      "flot": "~0.8.2",
-            |      "jquery-spinner": "~0.1.5",
-            |      "jquery-steps": "https://github.com/rstaib/jquery-steps.git#~1.0.4",
-            |      "angular-wizard": "~0.3.0"
+            |    "jquery": "~1.11.0",
+            |    "angular": "~1.2.0",
+            |    "angular-resource": "~1.2.0",
+            |    "angular-cookies": "~1.2.0",
+            |    "angular-sanitize": "~1.2.0",
+            |    "angular-route": "~1.2.0",
+            |    "angular-animate": "~1.2.0",
+            |    "font-awesome": "~4.0.3",
+            |    "toastr": "~2.0.1",
+            |    "underscore": "~1.5.2",
+            |    "seiyria-bootstrap-slider": "~1.9.0",
+            |    "bootstrap": "~3.1.0",
+            |    "angular-bootstrap": "~0.10.0",
+            |    "bootstrap-file-input": "*",
+            |    "holderjs": "~2.3.1",
+            |    "jquery.easy-pie-chart": "~2.1.4",
+            |    "morris.js": "~0.5.0",
+            |    "jquery.ui": "~1.10.4",
+            |    "jquery.slimscroll": "~1.3.1",
+            |    "jquery.easing": "~1.3.0",
+            |    "moment": "~2.5.1",
+            |    "gauge.js": "~1.0.0",
+            |    "flot": "~0.8.2",
+            |    "jquery-spinner": "~0.1.5",
+            |    "jquery-steps": "https://github.com/rstaib/jquery-steps.git#~1.0.4",
+            |    "angular-wizard": "~0.3.0",
+            |    "weather-icons": "~0.0.1",
+            |    "textAngular": "~1.2.0",
+            |    "flot.tooltip": "*"
             |   }
 
     section#grunt
@@ -303,7 +306,7 @@ block content
             |  (Bower, Grunt come along with it), 
             a(href="https://www.ruby-lang.org/en/") Ruby
             | , 
-            a(href="http://sass-lang.com/") Sass 
+            a(href="http://sass-lang.com/") #{processor} 
             | , 
             a(href="http://compass-style.org/") Compass
             |  installed.
@@ -314,7 +317,7 @@ block content
             li Install NPM and Bower packages with NPM and Bower.
             li Then type
                 strong  grunt server
-                |  then you are ready to go.
+                |  and you are ready to go.
         p All the files for development are under 
             strong ./#{name}/client/
             |  folder.
@@ -376,116 +379,172 @@ block content
             | , which load all the scripts. 
         p.lead The Head
         pre.prettyprint.linenums
-            |&lt;!doctype html&gt;
-            |&lt;!--[if lt 9]&gt;         &lt;html class="no-js lt-ie9"&gt; &lt;![endif]--&gt;
-            |&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js"&gt; &lt;!--&lt;![endif]--&gt;
-            |    &lt;head&gt;
-            |        &lt;meta charset="utf-8"&gt;
-            |        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-            |        &lt;title&gt;Web Application&lt;/title&gt;
-            |        &lt;meta name="description" content=""&gt;
-            |        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"&gt;
-            |        &lt;!-- Place favicon.ico and apple-touch-icon.png in the root directory --&gt;
-            |        &lt;link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Open+Sans:300italic,400italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'&gt;
-            |        &lt;!-- needs images, font... therefore can not be part of ui.css --&gt;
-            |        &lt;link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"&gt;
-            |        &lt;!-- end needs images --&gt;
-            |
-            |            &lt;!-- build:css styles/ui.css --&gt;
-            |            &lt;link rel="stylesheet" href="bower_components/morris.js/morris.css"&gt;
-            |            &lt;link rel="stylesheet" href="bower_components/angular-wizard/dist/angular-wizard.css"&gt;
-            |            &lt;!-- endbuild --&gt;
-            |            &lt;link rel="stylesheet" href="styles/main.css"&gt;
-            |
-            |    &lt;/head&gt;
+            | &lt;!doctype html&gt;
+            | &lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js"&gt; &lt;!--&lt;![endif]--&gt;
+            |     &lt;head&gt;
+            |         &lt;meta charset="utf-8"&gt;
+            |         &lt;meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'&gt;
+            |         &lt;title&gt;Web Application&lt;/title&gt;
+            |         &lt;meta name="description" content=""&gt;
+            |         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"&gt;
+            |         &lt;!-- Place favicon.ico and apple-touch-icon.png in the root directory --&gt;
+            |         &lt;link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'&gt;
+            |         &lt;!-- needs images, font... therefore can not be part of ui.css --&gt;
+            |         &lt;link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"&gt;
+            |         &lt;link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css"&gt;
+            |         &lt;!-- end needs images --&gt;
+            | 
+            |             &lt;!-- build:css styles/ui.css --&gt;
+            |             &lt;link rel="stylesheet" href="bower_components/morris.js/morris.css"&gt;
+            |             &lt;!-- endbuild --&gt;
+            |             &lt;link rel="stylesheet" href="styles/main.css"&gt;
+            | 
+            |     &lt;/head&gt;
 
         p.lead The Body
         pre.prettyprint.linenums
-            |    &lt;body data-ng-app="app" id="app" data-custom-background data-off-canvas-nav&gt;
-            |        &lt;!--[if lt IE 9]&gt;
-            |            &lt;p class="browsehappy"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="http://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
-            |        &lt;![endif]--&gt;
-            |
-            |        &lt;div data-ng-controller="AppCtrl"&gt;
-            |            &lt;div data-ng-hide="isSpecificPage()"
-            |                 data-ng-cloak&gt;
-            |                &lt;section data-ng-include=" 'views/header.html' "
-            |                     id="header" class="top-header"&gt;&lt;/section&gt;
-            |
-            |                &lt;aside data-ng-include=" 'views/nav.html' "
-            |                     id="nav-container"&gt;&lt;/aside&gt;
-            |            &lt;/div&gt;
-            |
-            |            &lt;div class="view-container"&gt;
-            |                &lt;section data-ng-view id="content" class="animate-fade-up"&gt;&lt;/section&gt;
-            |            &lt;/div&gt;
-            |        &lt;/div&gt;
+            |     &lt;body data-ng-app="app" id="app" data-custom-background data-off-canvas-nav&gt;
+            |         &lt;!--[if lt IE 9]&gt;
+            |             &lt;p class="browsehappy"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="http://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
+            |         &lt;![endif]--&gt;
+            | 
+            |         &lt;div data-ng-controller="AppCtrl"&gt;
+            |             &lt;div data-ng-hide="isSpecificPage()"
+            |                  data-ng-cloak&gt;
+            |                 &lt;section data-ng-include=" 'views/header.html' "
+            |                      id="header" class="top-header"&gt;&lt;/section&gt;
+            | 
+            |                 &lt;aside data-ng-include=" 'views/nav.html' "
+            |                      id="nav-container"&gt;&lt;/aside&gt;
+            |             &lt;/div&gt;
+            | 
+            |             &lt;div class="view-container"&gt;
+            |                 &lt;section data-ng-view id="content" class="animate-fade-up"&gt;&lt;/section&gt;
+            |             &lt;/div&gt;
+            |         &lt;/div&gt;
 
         p.lead The Foot
         pre.prettyprint.linenums
-            |        &lt;!-- build:js scripts/vendor.js --&gt;
-            |        &lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/angular/angular.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/angular-route/angular-route.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/angular-animate/angular-animate.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/underscore/underscore-min.js"&gt;&lt;/script&gt;
-            |        &lt;!-- endbuild --&gt;
-            |
-            |        &lt;!-- build:js scripts/ui.js --&gt;
-            |        &lt;script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/jquery-spinner/dist/jquery.spinner.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/jquery-steps/build/jquery.steps.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/toastr/toastr.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/bootstrap-file-input/bootstrap.file-input.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/holderjs/holder.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/raphael/raphael-min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/morris.js/morris.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/vendors/responsive-tables.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/vendors/jquery.sparkline.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/flot/jquery.flot.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/flot/jquery.flot.resize.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/flot/jquery.flot.pie.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/flot/jquery.flot.stack.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/flot/jquery.flot.time.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/gauge.js/dist/gauge.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.min.js"&gt;&lt;/script&gt;
-            |        &lt;script src="bower_components/angular-wizard/dist/angular-wizard.min.js"&gt;&lt;/script&gt;
-            |        &lt;!-- endbuild --&gt;
-            |
-            |        &lt;!-- build:js({.tmp,app}) scripts/app.js --&gt;
-            |        &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/shared/main.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/shared/directives.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/shared/localize.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/UI/UICtrl.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/UI/UIService.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Form/FormDirective.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Form/FormCtrl.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Form/FormValidation.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Table/TableCtrl.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Task/Task.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Chart/ChartCtrl.js"&gt;&lt;/script&gt;
-            |        &lt;script src="scripts/Chart/ChartDirective.js"&gt;&lt;/script&gt;
-            |        &lt;!-- endbuild --&gt;
-            |    &lt;/body&gt;
-            |&lt;/html&gt;
+            |         &lt;!-- build:js scripts/vendor.js --&gt;
+            |         &lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/angular/angular.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/angular-route/angular-route.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/angular-animate/angular-animate.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/underscore/underscore-min.js"&gt;&lt;/script&gt;
+            |         &lt;!-- endbuild --&gt;
+            | 
+            |         &lt;!-- build:js scripts/ui.js --&gt;
+            |         &lt;script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/jquery-spinner/dist/jquery.spinner.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/jquery-steps/build/jquery.steps.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/toastr/toastr.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/bootstrap-file-input/bootstrap.file-input.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/holderjs/holder.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/raphael/raphael-min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/morris.js/morris.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/vendors/responsive-tables.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/vendors/jquery.sparkline.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot/jquery.flot.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot/jquery.flot.resize.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot/jquery.flot.pie.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot/jquery.flot.stack.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/flot/jquery.flot.time.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/gauge.js/dist/gauge.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/angular-wizard/dist/angular-wizard.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/textAngular/textAngular-sanitize.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="bower_components/textAngular/textAngular.min.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/vendors/skycons.js"&gt;&lt;/script&gt;
+            |         &lt;!-- endbuild --&gt;
+            | 
+            |         &lt;!-- build:js({.tmp,app}) scripts/app.js --&gt;
+            |         &lt;script src="scripts/app.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/shared/main.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/shared/directives.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/shared/localize.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/UI/UICtrl.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/UI/UIDirective.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/UI/UIService.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Form/FormDirective.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Form/FormCtrl.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Form/FormValidation.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Table/TableCtrl.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Task/Task.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Chart/ChartCtrl.js"&gt;&lt;/script&gt;
+            |         &lt;script src="scripts/Chart/ChartDirective.js"&gt;&lt;/script&gt;
+            |         &lt;!-- endbuild --&gt;
+            |     &lt;/body&gt;
+            | &lt;/html&gt;
+
 
     section#credits
         .page-header
             h1 Credits
         ul
-            li 
-                a(href="http://angularjs.org/") angular.js
-                |  HTML enhanced for web apps!
-            li 
-                a(href="http://jquery.com/") jquery.js
-                |  The most popluar JavaScript framework
-            li 
-                a(href="http://yeoman.io/") Yeoman, Grunt, Bower
-                |  a workflow for web development.
-            li 
+            li
+                a(href="http://getbootstrap.com/") Bootstrap
+                |  The most popular front-end framework for developing responsive, mobile first projects on the web.
+            li
+                a(href="http://jquery.com/") jQuery
+                |  write less, do more.
+            li
+                a(href="http://angularjs.org/") AngularJS
+                |  HTML enhanced for web Apps!
+            li
+                a(href="https://github.com/angular-ui/bootstrap") angular-bootstrap
+                |  Native AngularJS (Angular) directives for Twitter's Bootstrap. 
+            li
+                a(href="http://yeoman.io/") Yeoman
+                | , [Twitter Bower](http://bower.io/), [Grunt](http://gruntjs.com/")) for modern web Apps.
+            li
                 a(href="http://fontawesome.io/") Font Awesome
-                |  for the awesome icon fonts.
+                |  the awesome icon fonts.
+            li
+                a(href="https://github.com/jashkenas/underscore") UnderscoreJS
+                |  JavaScript's utility _ belt
+            li
+                a(href="https://github.com/CodeSeven/toastr") Toastr
+                |  Simple javascript toast notifications
+            li
+                a(href="https://github.com/seiyria/bootstrap-slider") bootstrap-slider
+                |  simple range slider
+            li
+                a(href="https://github.com/grevory/bootstrap-file-input") bootstrap-file-input
+                |  Standardizes the file input field to look like a Bootstrap button in all browsers
+            li
+                a(href="https://github.com/imsky/holder") holderjs
+                |  Holder renders image placeholders entirely on the client side.
+            li
+                a(href="https://github.com/rendro/easy-pie-chart") jquery.easy-pie-chart
+                |  a lightweight plugin to draw simple, animated pie charts for single values
+            li
+                a(href="https://github.com/morrisjs/morris.js") morris.js
+                |  Pretty time-series line graphs
+            li
+                a(href="https://github.com/flot/flot") flot
+                |  Attractive JavaScript charts for jQuery
+            li
+                a(href="https://github.com/bernii/gauge.js") gauge.js
+                |  100% native and cool looking JavaScript gauge
+            li
+                a(href="https://github.com/xixilive/jquery-spinner") jquery-spinner
+                |  A Number-Spinner based-on jQuery, Support Keyboard operations and continuous changing.
+            li
+                a(href="https://github.com/rstaib/jquery-steps") jquery-steps
+                |  A powerful jQuery wizard plugin that supports accessibility and HTML5.
+            li
+                a(href="http://depositphotos.com/") depositphotos
+                |  Royalty-Free Stock Photos
+            li
+                a(href="https://github.com/erikflowers/weather-icons") weather-icons
+                |  Beautiful weather icons.
+            li
+                a(href="https://github.com/fraywing/textAngular") textAngular
+                |  A radically powerful Text-Editor/Wysiwyg editor for Angular.js!
+            li
+                a(href="https://github.com/krzysu/flot.tooltip") flot.tooltip
+                |  tooltip plugin for wonderful Flot plotting library
 
